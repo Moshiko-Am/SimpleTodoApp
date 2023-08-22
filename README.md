@@ -4,10 +4,9 @@ A simple and intuitive Todo App built using React, TypeScript, and SCSS.
 
 ## App Preview
 
-<div style="display: flex; align-items: center; gap:1rem">
-  <img src="src/assets/todo-app1.png" alt="Todo App Screenshot" style="width: 50%; height: 400px; background-color: red">
-  <img src="src/assets/todo-app2.png" alt="Todo App Screenshot" style="width: 50%; height: 400px">
-</div>
+![Todo App Screenshot 1](/src/assets/todo-app1.png) | ![Todo App Screenshot 2](/src/assets/todo-app2.png)
+:-------------------------:|:-------------------------:
+
 
 ## Features
 
