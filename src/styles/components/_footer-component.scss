@@ -1,0 +1,48 @@
+.footer-component {
+	width: 100%;
+	@include flex-between;
+	padding-inline: 1.2rem;
+	height: $list-item-height;
+	background-color: $bg-dark-secondary;
+	border-bottom-left-radius: $list-item-border-radius;
+	border-bottom-right-radius: $list-item-border-radius;
+	color: $text-secondary-dark;
+	font-size: 14px;
+	@include transition;
+
+	&__filters-container {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__filter-item {
+		cursor: pointer;
+		@include transition;
+
+		&:hover:not(&--selected) {
+			color: $color-white;
+		}
+
+		&--selected {
+			color: $color-accent;
+		}
+	}
+
+	&__clear-completed {
+		cursor: pointer;
+		@include transition;
+		&:hover {
+			color: $color-white;
+		}
+	}
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+		height: unset;
+		gap: 1rem;
+		margin-block: 1rem;
+		padding-block: 1rem;
+		border-radius: $list-item-border-radius;
+	}
+}

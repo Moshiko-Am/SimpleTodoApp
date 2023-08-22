@@ -1,0 +1,26 @@
+.background-component {
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+
+	// Default image for desktop
+	background-image: url('/src/assets/bg-desktop-dark.jpg');
+	background-size: cover;
+	background-position: center;
+
+	@media (max-width: 768px) {
+		// Default image for mobile
+		background-image: url('/src/assets/bg-mobile-dark.jpg');
+	}
+
+	&--light-mode {
+		background-image: url('/src/assets/bg-desktop-light.jpg');
+
+		@media (max-width: 768px) {
+			background-image: url('/src/assets/bg-mobile-light.jpg');
+		}
+	}
+}

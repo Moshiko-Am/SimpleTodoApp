@@ -1,0 +1,35 @@
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin flex-column-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-column-between {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin transition {
+	transition: all 250ms ease-in-out;
+}
+
+@mixin truncate1Line {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

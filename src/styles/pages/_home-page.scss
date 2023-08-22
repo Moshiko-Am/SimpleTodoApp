@@ -1,0 +1,53 @@
+.home-page {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: $bg-dark-primary;
+	color: $text-primary-dark;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+
+	&--light-mode {
+		background-color: $bg-light-primary;
+		color: $text-primary-light;
+
+		& .todo-component__create-container, .todo-item, .footer-component {
+			background-color: $bg-light-primary;
+		}
+
+		& .todo-item {
+			border-color: $text-tertiary-light;
+
+			& .todo-item__select-checkbox {
+				border-color: $text-tertiary-light;
+
+				&--completed {
+					background: $light-linear-gradient;
+				}
+
+				&:hover {
+					border-color: $text-primary-light;
+				}
+			}
+
+			&:hover {
+				background-color: $bg-light-primary;
+			}
+		}
+
+		& .todo-component__create-input {
+			color: $text-primary-light;
+		}
+
+		& .footer-component {
+			& .footer-component__filter-item:not(.footer-component__filter-item--selected), .footer-component__clear-completed {
+				&:hover {
+					color: $text-primary-light;
+				}
+			}
+		}
+	}
+}

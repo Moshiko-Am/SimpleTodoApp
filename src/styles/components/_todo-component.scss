@@ -1,0 +1,107 @@
+.todo-component {
+	z-index: 1;
+	width: 570px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-block-start: 5rem;
+	padding: 1rem;
+
+	&__header {
+		width: 100%;
+		@include flex-column-between;
+		margin-block-end: 3rem;
+	}
+
+	&__title {
+		letter-spacing: 15px;
+		font-weight: 700;
+
+		&-container {
+			@include flex-between;
+			width: 100%;
+			color: $color-white;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2rem;
+		width: 100%;
+	}
+
+	&__create {
+		&-container {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			width: 100%;
+			height: $list-item-height;
+			background-color: $bg-dark-secondary;
+			border-radius: $list-item-border-radius;
+			padding-inline: 1rem;
+			@include transition;
+		}
+
+		&-checkbox {
+			width: 24px;
+			aspect-ratio: 1;
+			border-radius: 50%;
+			border: 1px solid $text-tertiary-dark;
+			@include transition;
+			cursor: pointer;
+
+			&:hover {
+				border-color: $checkbox-hover-color;
+			}
+
+		}
+
+		&-input {
+			width: 100%;
+			height: 100%;
+			outline: none;
+			border: none;
+			font-size: inherit;
+			background-color: transparent;
+			caret-color: $color-accent;
+			color: $color-white;
+		}
+	}
+
+	&__checkbox-icon {
+		opacity: 0;
+		visibility: hidden;
+		@include transition;
+		width: 18px;
+		cursor:pointer;
+		aspect-ratio: 1;
+
+		&--visible {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&__list-container, &__footer {
+		width: 100%;
+
+	}
+
+	&__light-mode-icon {
+		cursor: pointer;
+		width: 24px;
+	}
+
+	@media (max-width: 600px) {
+		width: 100%;
+		padding: 0 1rem;
+
+		&__create-input {
+			font-size: 0.9rem;
+		}
+	}
+}

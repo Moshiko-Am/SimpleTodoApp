@@ -1,0 +1,79 @@
+.todo-item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+	height: $list-item-height;
+	background-color: $bg-dark-secondary;
+	padding-inline: 1rem;
+	cursor: pointer;
+	@include transition;
+	border-bottom: 1px solid $text-tertiary-dark;
+
+	&:hover {
+		background-color: darken($bg-dark-secondary, 2%);
+
+		& .todo-item__delete-icon {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+
+	&:first-of-type {
+		border-top-left-radius: $list-item-border-radius;
+		border-top-right-radius: $list-item-border-radius;
+	}
+
+	&__select-checkbox {
+		width: 24px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		border: 1px solid $text-tertiary-dark;
+		@include transition;
+		@include flex-center;
+		cursor: pointer;
+
+		&--completed {
+			background: $dark-linear-gradient;
+		}
+
+		&:hover {
+			border-color: $checkbox-hover-color;
+		}
+	}
+
+	&__checkbox-icon {
+		opacity: 0;
+
+		&--visible {
+			opacity: 1;
+		}
+	}
+
+	&__todo-text {
+		flex: 1;
+		@include transition;
+		@include truncate1Line;
+
+
+		&--completed {
+			text-decoration: line-through;
+			color: $text-secondary-dark;
+		}
+	}
+
+	&__delete-icon {
+		width: 18px;
+		aspect-ratio: 1;
+		opacity: 0;
+		visibility: hidden;
+		@include transition;
+	}
+
+	@media (max-width: 600px) {
+		&__todo-text {
+			font-size: 0.9rem;
+		}
+	}
+}

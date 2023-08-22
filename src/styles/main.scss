@@ -1,0 +1,26 @@
+@import './reset-css.scss';
+@import './colors.scss';
+@import './mixins';
+@import './variables';
+@import './pages/_home-page.scss';
+@import './components/_background-component.scss';
+@import './components/_todo-component.scss';
+@import './components/_todo-item.scss';
+@import './components/_footer-component.scss';
+
+html{
+	width: 100vw;
+	height: 100vh;
+}
+
+#root {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	color: $text-primary-dark;
+	font-size: 18px;
+}
