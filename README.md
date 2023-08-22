@@ -1,27 +1,38 @@
-# React + TypeScript + Vite
+# Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and intuitive Todo App built using React, TypeScript, and SCSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add new tasks to your todo list.
+- Mark tasks as completed.
+- Remove tasks from the list.
+- Clear all completed tasks with a single click.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React: JavaScript library for building user interfaces.
+- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
+- SCSS: A powerful CSS preprocessor that enhances the styling of your app.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+1. Clone the repository:
+- git clone https://github.com/Moshiko-Start/SimpleTodoApp.git
+- cd [your repository].
+2. Install dependencies:
+- npm install
+3. Start the development server:
+- npm run dev / npm start 
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Usage
+
+- Add a new task: Enter the task in the input field and press Enter.
+- Mark as completed: Click the checkbox next to the task.
+- Remove a task: Click the "Delete" icon next to the task.
+- Clear completed tasks: Click the "Clear Completed" button.
+- Filter tasks: Filter your todos by "All", "Active", or "Completed" filters.
+
+
+
+
