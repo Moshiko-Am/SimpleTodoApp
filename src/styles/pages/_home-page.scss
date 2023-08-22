@@ -18,6 +18,12 @@
 			background-color: $bg-light-primary;
 		}
 
+		& .todo-component__create-checkbox {
+			&:hover {
+				border-color: $text-primary-light;
+			}
+		}
+
 		& .todo-item {
 			border-color: $text-tertiary-light;
 
@@ -40,6 +46,17 @@
 
 		& .todo-component__create-input {
 			color: $text-primary-light;
+		}
+
+		& .todo-component__checkbox-icon--visible {
+			border-radius: 50%;
+			background-color: $bg-dark-secondary;
+			width: 24px;
+			padding: 4px;
+
+			&:hover {
+				background-color: lighten($bg-dark-secondary, 30%);
+			}
 		}
 
 		& .footer-component {

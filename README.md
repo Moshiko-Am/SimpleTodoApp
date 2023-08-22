@@ -8,12 +8,16 @@ A simple and intuitive Todo App built using React, TypeScript, and SCSS.
 - Mark tasks as completed.
 - Remove tasks from the list.
 - Clear all completed tasks with a single click.
+- Filter tasks list.
+- Responsive design.
+- Dark mode.
 
 ## Technologies Used
 
 - React: JavaScript library for building user interfaces.
 - TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
 - SCSS: A powerful CSS preprocessor that enhances the styling of your app.
+- Zustand: A simple and lightweight state management library.
 
 ## Installation
 

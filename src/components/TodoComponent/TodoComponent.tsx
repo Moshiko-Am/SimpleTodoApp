@@ -30,7 +30,8 @@ const TodoComponent: React.FC<ITodoComponent> = () => {
 		}
 	}, [filter, todos]);
 
-	const handleCreateTodo = () => {
+	const handleCreateTodo = (e?: React.FormEvent<HTMLFormElement>) => {
+		e?.preventDefault();
 		if (!todoText) return;
 		onCreateTodo?.(todoText);
 		setTodoText('');
@@ -51,13 +52,15 @@ const TodoComponent: React.FC<ITodoComponent> = () => {
 			</div>
 			<div className={generateBEMClassName({ block: BEMBlock, element: 'body' })}>
 				<div className={generateBEMClassName({ block: BEMBlock, element: 'create-container' })}>
-					<span className={generateBEMClassName({ block: BEMBlock, element: 'create-checkbox' })} onClick={handleCreateTodo} />
-					<input
-						className={generateBEMClassName({ block: BEMBlock, element: 'create-input' })}
-						placeholder={'Create a new todo...'}
-						value={todoText}
-						onChange={(e) => setTodoText(e.target.value)}
-					/>
+					<span className={generateBEMClassName({ block: BEMBlock, element: 'create-checkbox' })} onClick={() => handleCreateTodo()} />
+					<form className={generateBEMClassName({ block: BEMBlock, element: 'create-form' })} onSubmit={(e) => handleCreateTodo(e)}>
+						<input
+							className={generateBEMClassName({ block: BEMBlock, element: 'create-input' })}
+							placeholder={'Create a new todo...'}
+							value={todoText}
+							onChange={(e) => setTodoText(e.target.value)}
+						/>
+					</form>
 					<img
 						src='/src/assets/icon-check.svg'
 						alt='icon-check'
@@ -66,7 +69,7 @@ const TodoComponent: React.FC<ITodoComponent> = () => {
 							element: 'checkbox-icon',
 							modifier: { name: 'visible', condition: !!todoText },
 						})}
-						onClick={handleCreateTodo}
+						onClick={() => handleCreateTodo()}
 					/>
 				</div>
 				<div className={generateBEMClassName({ block: BEMBlock, element: 'list-container' })}>
