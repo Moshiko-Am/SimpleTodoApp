@@ -11,7 +11,7 @@
 	z-index: 1;
 
 	&--light-mode {
-		background-color: $bg-light-primary;
+		background: $bg-light-secondary;
 		color: $text-primary-light;
 
 		& .todo-component__create-container, .todo-item, .footer-component {
