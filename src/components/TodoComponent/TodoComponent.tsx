@@ -73,7 +73,11 @@ const TodoComponent: React.FC<ITodoComponent> = () => {
 					/>
 				</div>
 				<div className={generateBEMClassName({ block: BEMBlock, element: 'list-container' })}>
-					{todosToShow?.map((todo) => <TodoItem key={todo?.id} todo={todo} />)}
+					{todosToShow?.length ? (
+						todosToShow?.map((todo) => <TodoItem key={todo?.id} todo={todo} />)
+					) : (
+						<div className={generateBEMClassName({ block: BEMBlock, element: 'empty-list' })}>No todos to show</div>
+					)}
 				</div>
 			</div>
 			<div className={generateBEMClassName({ block: BEMBlock, element: 'footer' })}>

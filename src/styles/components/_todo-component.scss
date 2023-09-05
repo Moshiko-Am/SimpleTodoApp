@@ -104,6 +104,12 @@
 		width: 24px;
 	}
 
+	&__empty-list {
+		background-color: $bg-dark-secondary;
+		padding: 1rem;
+		border-radius: $list-item-border-radius;
+	}
+
 	@media (max-width: 600px) {
 		width: 100%;
 		padding: 0 1rem;

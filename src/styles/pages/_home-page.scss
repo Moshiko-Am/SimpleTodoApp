@@ -14,7 +14,7 @@
 		background: $bg-light-secondary;
 		color: $text-primary-light;
 
-		& .todo-component__create-container, .todo-item, .footer-component {
+		& .todo-component__create-container, .todo-item, .footer-component, .todo-component__empty-list {
 			background-color: $bg-light-primary;
 		}
 
